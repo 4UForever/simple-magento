@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Sawai - MyModule</title>
+        <css src="Sawai_Mymodule::css/mymodule.css" />
+    </head>
+    <body>
+        <referenceBlock name="page.main.title" remove="true" />
+        <referenceContainer name="content">
+            <block class="Sawai\Mymodule\Block\Index" name="mymodule.index" template="view.phtml" />
+        </referenceContainer>
+    </body>
+</page>
