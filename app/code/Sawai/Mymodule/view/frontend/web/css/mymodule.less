@@ -1,0 +1,101 @@
+.container {
+  .row {
+    margin: 10px 0;
+    .col {
+      h2 {
+        font-weight: 600;
+        padding: 0 0.5em;
+        margin-bottom: 2em;
+        font-size: large;
+      }
+    }
+    .d-flex {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .item {
+        width: ~"calc(25% - 40px)";
+        padding: 20px;
+        .img {
+          height: 320px;
+          object-fit: cover;
+          margin-bottom: 2em;
+        }
+        .title {
+          font-weight: 600;
+          display: block;
+          margin: 0.5em 0;
+          font-size: medium;
+          height: 70px;
+        }
+        .time {
+          display: block;
+          font-weight: 600;
+          margin: 0.5em 0;
+        }
+        .stars {
+          display: block;
+          margin: 0.5em 0;
+          .star::before {
+            color: #c7c7c7;
+            font-family: 'luma-icons';
+            font-size: 20px;
+            letter-spacing: 7px;
+            content: '\e605';
+            display: inline-block;
+          }
+          .active::before {
+            color: #e93223;
+          }
+        }
+        .price {
+          margin-top: 1em;
+          display: block;
+          font-size: large;
+          font-weight: 600;
+        }
+        &:hover {
+          box-shadow: 4px 4px 12px 2px #ddd;
+        }
+      }
+    }
+    .paging {
+      margin: 2em;
+      display: flex;
+      justify-content: center;
+      a {
+        text-decoration: none;
+      }
+      .page {
+        width: 40px;
+        height: 40px;
+        background-color: #fae1e2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        font-size: medium;
+        font-weight: 600;
+        margin: 0 3px;
+      }
+      .active {
+        background-color: #dd534c;
+      }
+      .icon-next::before {
+        width: 40px;
+        height: 40px;
+        background-color: #d0d0d0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: medium;
+        font-weight: 600;
+        content: '\e608';
+        font-family: 'luma-icons';
+        font-size: 20px;
+      }
+    }
+  }
+}

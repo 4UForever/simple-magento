@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row ">
+    <div class="col"><h2>Items 1 - 12 of 23</h2></div>
+  </div>
+  <div class="row">
+    <div class="col d-flex">
+      <?php
+      // <img src="'.$item->getImage().'" />
+      foreach($this->getContents() as $item){
+        echo '
+        <div class="item">
+          <img class="img" src="'.$item['image_url'].'" />
+          <span class="title">'.$item['title'].'</span>
+          <span class="time">'.$this->time_elapsed_string($item['created_at']).'</span>
+          <div class="stars">'.$this->getStar($item['vote']).'</div>
+          <span class="price">฿'.number_format($item['price'], 2).'</span>
+        </div>';
+      }
+      ?>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col paging">
+      <a class="page active" href="javascript:void(0);">1</a><a class="page" href="javascript:void(0);">2</a><a href="javascript:void(0);" class="icon-next"></a>
+    </div>
+  </div>
+</div>
