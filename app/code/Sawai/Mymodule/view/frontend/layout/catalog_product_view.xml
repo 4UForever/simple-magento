@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <head>
+    <css src="Sawai_Mymodule::css/product_detail.css" />
+  </head>
+  <body>
+    <referenceContainer name="product.info.main">
+        <block class="Sawai\Mymodule\Block\Product\View" name="custom.mymodule.product.view" template="product/detail.phtml" before="-"/>
+    </referenceContainer>
+    <referenceBlock name="product.info.review" remove="true" />
+    <referenceBlock name="reviews.tab" remove="true" />
+  </body>
+</page>
